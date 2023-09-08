@@ -1,4 +1,6 @@
-// const, let 等の変数宣言
+/**
+ *  const, let 等の変数宣言
+ */
 
 var val1 = "var変数";
 console.log(val1);
@@ -63,3 +65,22 @@ console.log(val5);
 // このように、オブジェクトや配列はconstで宣言しても変更ができる
 // よって、Reactではほとんどをconstで宣言することになる
 // 処理の中で上書きが必要な変数にはletを使う
+
+/**
+ * テンプレート文字列
+ */
+
+const name = "Tom";
+const age = 3;
+// 「私の名前はTomです。年齢は3歳です。」という文字列を表示したい
+
+// 従来の方法
+const message1 = "私の名前は" + name + "です。年齢は" + age + "歳です。";
+console.log(message1);
+// これだと結合の度に+を書かないといけないし、読みにくい
+
+// テンプレート文字列を用いた方法
+const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message2);
+// バッククオート内の${}内に書かれたコードはJSのコードとして解釈される。
+
