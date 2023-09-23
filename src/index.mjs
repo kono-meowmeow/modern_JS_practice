@@ -336,3 +336,37 @@ const checkSum = (num1, num2) => {
 }
 console.log(checkSum(50, 60)); // 100を超えています
 console.log(checkSum(50, 40)); // 許容範囲内です
+
+/**
+ * 論理演算子の本当の意味を知ろう && ||
+ */
+
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  // flag1がtrueなので、左側が返されて、左側がtrueなので、if文が実行される
+  console.log("1か2はtrueになります");
+}
+if (flag1 && flag2) {
+  // flag1がtrueなので、右側が返されて、右側がfalseなので、if文は実行されない
+  console.log("1も2もtrueになります");
+}
+
+//  || は左側がfalseなら右側を返す
+const num5 = null;
+const fee = num5 || "金額未設定です";
+// num5がnullなので、右側の"金額未設定です"が返される
+console.log(fee); // 金額未設定です
+const num6 = 100;
+const fee2 = num6 || "金額未設定です";
+// num6が100なので、左側の100が返される
+console.log(fee2); // 100
+
+// && は左側がtrueなら右側を返す
+const num7 = 100;
+const fee3 = num7 && "何か設定されました";
+console.log(fee3); // 何か設定されました
+const num8 = null;
+const fee4 = num8 && "何か設定されました";
+console.log(fee4); // null
