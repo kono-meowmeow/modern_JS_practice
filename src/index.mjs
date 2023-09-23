@@ -280,3 +280,24 @@ for (let index = 0; index < nameArr.length; index++) {
 // mapを使った書き方
 // 第二引数に配列のindex番号が入ってくる
 nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// 実践的なmapの使い方
+
+// nameArrの鈴木以外にはさん付けをする配列を作成する
+const newNameArr = nameArr.map((name) => {
+  if (name === "鈴木") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr); // ["田中さん", "山田さん", "鈴木"]
+
+// nameArrの鈴木以外にはさん付けをする
+nameArr.map((name) => {
+  if (name === "鈴木") {
+    console.log(name);
+  } else {
+    console.log(`${name}さん`);
+  }
+});
