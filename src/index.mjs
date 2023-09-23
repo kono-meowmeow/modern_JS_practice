@@ -121,3 +121,36 @@ console.log(func5(10, 200));
 // 下記の書き方をしても同じ結果を得ることができる
 const func6 = (num1, num2) => num1 + num2;
 console.log(func6(10, 200));
+
+/**
+ * 分割代入
+ */
+
+// オブジェクトで通常の書き方
+const myProfile = {
+  name2: "Tom",
+  age2: 3,
+};
+const message3 = `名前は${myProfile.name2}です。年齢は${myProfile.age2}歳です。`;
+// 上記の書き方だと、myProfileの中身を取得するたびにmyProfileを書かないといけないので、プロパティが増えたときに面倒
+console.log(message3);
+
+// 分割代入を使うと、myProfileの中身を取得するときにmyProfileを書かなくてもいい
+// const { プロパティ名1, プロパティ名2 } = オブジェクト名;
+// プロパティ名は元のオブジェクトのプロパティ名と同じにする必要がある
+const { name2, age2 } = myProfile;
+const message4 = `名前は${name2}です。年齢は${age2}歳です。`;
+console.log(message4);
+
+// 配列で通常の書き方
+const myProfile2 = ["Tom", 3];
+const message5 = `名前は${myProfile2[0]}です。年齢は${myProfile2[1]}歳です。`;
+// 上記の書き方だと、myProfileの中身を取得するたびにmyProfileを書かないといけないので、プロパティが増えたときに面倒
+console.log(message5);
+
+// 分割代入を使うと、myProfileの中身を取得するときにmyProfileを書かなくてもいい
+// const [変数名1, 変数名2] = 配列名;
+// 配列の場合は、順番に変数に代入される
+const [name3, age3] = myProfile2;
+const message6 = `名前は${name3}です。年齢は${age3}歳です。`;
+console.log(message6);
