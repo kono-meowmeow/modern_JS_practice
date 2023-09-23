@@ -154,3 +154,17 @@ console.log(message5);
 const [name3, age3] = myProfile2;
 const message6 = `名前は${name3}です。年齢は${age3}歳です。`;
 console.log(message6);
+
+/**
+ * デフォルト値、引数など
+ */
+
+const sayHello = (name = "ゲスト") => {
+  return console.log(`こんにちは！${name}さん！`);
+}
+// 引数が渡された場合は、渡された値が使われる
+sayHello("Tom"); // こんにちは！Tomさん！
+// 引数が渡されなかった場合は、デフォルト値が使われる
+// デフォルト値が設定されていない場合は、undefinedとなる（バグの原因になるので注意）
+sayHello(); // こんにちは！ゲストさん！
+
