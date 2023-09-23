@@ -187,3 +187,14 @@ sumFunc(...arr1); // 3
 // 復習：分割代入を使って書いてみる
 const [num1, num2] = arr1;
 sumFunc(num1, num2); // 3
+
+// まとめる
+const arr2 = [1, 2, 3, 4, 5];
+const [num3, num4, ...arr3] = arr2;
+// 分割代入で、num3には配列の一番最初の値が、num4には配列の二番目の値が、arr3には残りの値が入る
+console.log(num3); // 1
+console.log(num4); // 2
+// arr3はスプレッド構文を使っているので、arr2の残りの値が配列として入る
+console.log(arr3); // [3, 4, 5]
+// スプレッド構文で中身を確認すれば、配列の中身が順番に展開されていることがわかる
+console.log(...arr3); // 3 4 5
