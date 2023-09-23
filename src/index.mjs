@@ -301,3 +301,38 @@ nameArr.map((name) => {
     console.log(`${name}さん`);
   }
 });
+
+/**
+ * 三項演算子
+ */
+
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+const val6 = 1 > 0 ? "trueです" : "falseです";
+console.log(val6); // trueです
+const val7 = 1 < 0 ? "trueです" : "falseです";
+console.log(val7); // falseです
+
+// 三項演算子を使った簡単な条件分岐
+const num = 1300;
+// toLocaleStringは、数字を3桁区切りでカンマを入れてくれる
+// 例えば、1000だと1,000になる
+console.log(num.toLocaleString()); // 1,300
+
+const stringNum = "1300";
+// toLocaleStringは、文字列には意味をなさない
+console.log(stringNum.toLocaleString()); // 1300
+
+// 数字が与えられたら、3桁区切りでカンマを入れて返す関数を作る
+// typeofは、変数の型をチェックする
+const formattedNum = typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+const formattedStringNum = typeof stringNum === "number" ? stringNum.toLocaleString() : "数値を入力してください";
+// 実際は上のように二つ関数を作るのではなく、formattedNumのように一つの変数で処理をする(numの値を変えるだけ)
+console.log(formattedNum); // 1,300
+console.log(formattedStringNum); // 数値を入力してください
+
+// 関数のreturnに三項演算子を使う
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています" : "許容範囲内です";
+}
+console.log(checkSum(50, 60)); // 100を超えています
+console.log(checkSum(50, 40)); // 許容範囲内です
