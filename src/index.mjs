@@ -256,3 +256,16 @@ console.log(nameArr2); // ["田中", "山田", "鈴木"]
 
 // mapを使って、配列の中身を順番に取得する
 nameArr.map((name) => console.log(name)); // 田中 山田 鈴木
+
+// filterを使った書き方
+// filterは配列に対して使えるメソッド
+// ある条件に一致したものだけを取得して、新しい配列を作成する
+
+const numArr = [1, 2, 3, 4, 5];
+// 奇数だけを取得する
+const newNumArr = numArr.filter((num) => {
+  // filterの場合は、returnの後に条件式を書く
+  // 条件式がtrueのものだけが、新しい配列に追加される
+  return num % 2 === 1;
+});
+console.log(newNumArr); // [1, 3, 5]
