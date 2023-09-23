@@ -348,8 +348,17 @@ if (flag1 || flag2) {
   // flag1がtrueなので、左側が返されて、左側がtrueなので、if文が実行される
   console.log("1か2はtrueになります");
 }
+if (flag2 || flag1) {
+  // flag2がfalseなので、右側が返されて、右側がtrueなので、if文が実行される
+  console.log("1か2はtrueになります");
+}
+
 if (flag1 && flag2) {
   // flag1がtrueなので、右側が返されて、右側がfalseなので、if文は実行されない
+  console.log("1も2もtrueになります");
+}
+if (flag2 && flag1) {
+  // flag2がfalseなので、左側が返されて、左側がfalseなので、if文は実行されない
   console.log("1も2もtrueになります");
 }
 
