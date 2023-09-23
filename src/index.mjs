@@ -230,3 +230,29 @@ console.log(arr8); // [10, 20, 30, 40]
 // スプレッド構文を使わなかった場合、配列の中に配列が入ってしまう
 const arr9 = [arr4, arr5];
 console.log(arr9); // [[10, 20], [30, 40]]
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+// mapやfilterを使うことで、従来のfor文を使わなくても配列の中身を取得したり、条件に合うものだけを取得したりできる
+
+const nameArr = ["田中", "山田", "鈴木"];
+// 従来のfor文を使った書き方
+// for (第一引数に何回目の処理を管理するindex, 第二引数にループから抜ける条件, 第三引数に一回の処理が終わるたびに行う処理) {処理}
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(nameArr[index]);
+}
+
+// mapを使った書き方
+// mapは配列に対して使えるメソッド
+// 第一引数に配列の要素、第二引数に配列のindex番号、第三引数に処理対象の配列
+// 第二引数と第三引数は省略可能
+
+// mapを使った結果をもとに、新しい配列を作成する
+const nameArr2 = nameArr.map((name) => {
+  return name;
+});
+console.log(nameArr2); // ["田中", "山田", "鈴木"]
+
+// mapを使って、配列の中身を順番に取得する
+nameArr.map((name) => console.log(name)); // 田中 山田 鈴木
