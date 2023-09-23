@@ -269,3 +269,14 @@ const newNumArr = numArr.filter((num) => {
   return num % 2 === 1;
 });
 console.log(newNumArr); // [1, 3, 5]
+
+// 何番目の要素かを取得する
+
+// for文を使った書き方
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(`${index + 1}番目は${nameArr[index]}です`);
+}
+
+// mapを使った書き方
+// 第二引数に配列のindex番号が入ってくる
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
