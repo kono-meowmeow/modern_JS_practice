@@ -168,3 +168,22 @@ sayHello("Tom"); // こんにちは！Tomさん！
 // デフォルト値が設定されていない場合は、undefinedとなる（バグの原因になるので注意）
 sayHello(); // こんにちは！ゲストさん！
 
+/**
+ * スプレッド構文
+ */
+
+// 配列の展開
+const arr1 = [1, 2];
+console.log(arr1); // [1, 2]
+// スプレッド構文で書くと、配列の中身を順番に展開してくれる
+// ...配列名
+console.log(...arr1); // 1 2
+
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+// 通常の書き方
+sumFunc(arr1[0], arr1[1]); // 3
+// スプレッド構文で書くと、配列の中身を順番に展開してくれる
+sumFunc(...arr1); // 3
+// 復習：分割代入を使って書いてみる
+const [num1, num2] = arr1;
+sumFunc(num1, num2); // 3
